@@ -29,3 +29,7 @@ weatherForecast('Kolkata')
 
 oneCallApi(55.68, 12.57)
   .then(data => console.log(data))
+def weather_onecall(lat: float = 55.68, lon: float = 12.57, appid: str = APPID) -> dict:
+    """https://openweathermap.org/api/one-call-api"""
+    return requests.get(URL_BASE + "onecall", params=locals()).json()
+ 
